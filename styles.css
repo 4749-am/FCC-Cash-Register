@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    margin: 40px;
+}
+
+h1 {
+    margin: 40px;
+    text-align: center;
+}
+
+#cash-register {
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px
+}
+
+#purchase-btn, #cash{
+    border-radius: 5px;
+    padding: 5px;
+}
