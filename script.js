@@ -10,16 +10,23 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
+const cashInDrawer = cid.reduce((acc, curr) => acc + curr[1], 0);
 
 const customerCash = document.getElementById("cash");
 const changeDue = document.getElementById("change-due");
 const purchaseButton = document.getElementById("purchase-btn");
 
 purchaseButton.addEventListener("click", () => {
-  if (price > customerCash.value) {
-    alert("Customer does not have enough money to purchase the item")
+
+  const customerCashValue = parseFloat(customerCash.value);
+  const changeDueAmount = customerCashValue - price;
+
+  if (price > customerCashValue) {
+    alert("Customer does not have enough money to purchase the item");
+    return;
   }
-  if (price = customerCash.value) {
-    changeDue.textContent = "No change due - customer paid with exact cash"
+  if (price === customerCashValue) {
+    changeDue.textContent = "No change due - customer paid with exact cash";
+    return;
   }
 });
