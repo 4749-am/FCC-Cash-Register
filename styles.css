@@ -22,11 +22,16 @@ h1 {
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    gap: 20px
+    gap: 20px;
 }
 
 #purchase-btn, #cash{
     border-radius: 5px;
     padding: 5px;
     text-align: center;
+}
+
+#change-due {
+    text-align: center;
+    padding: 5px;
 }
