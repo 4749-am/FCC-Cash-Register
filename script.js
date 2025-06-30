@@ -20,6 +20,19 @@ purchaseButton.addEventListener("click", () => {
 
   const customerCashValue = parseFloat(customerCash.value);
   const changeDueAmount = customerCashValue - price;
+  let remainingChange = changeDueAmount;
+  const reversedCid = cid.slice().reverse();
+  const conversionToDollars = {
+    "PENNY":	0.01,
+    "NICKEL":	0.05,
+    "DIME":	0.10,
+    "QUARTER":	0.25,
+    "ONE":	1.00,
+    "FIVE":	5.00,
+    "TEN":	10.00,
+    "TWENTY":	20.00,
+    "ONE HUNDRED":	100.00
+  }
 
   if (price > customerCashValue) {
     alert("Customer does not have enough money to purchase the item");
